@@ -25,8 +25,9 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+    debugger
     const product = new Product({
-        _id: new mongoose.Schema.Types.ObjectId(),
+        _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
         price: req.body.price
     });
