@@ -9,8 +9,7 @@ const log = console.log;
 const mongoose = require('mongoose');
 //Version3.6
 mongoose.connect(
-    "mongodb+srv://user_rest_shop:" +
-    process.env.MONGO_ATLAS_PW +
+    "mongodb+srv://user_rest_shop:AAAAbbbbccc" +
     "@node-rest-shop-ricsq.mongodb.net/test?retryWrites=true"
 );
 
