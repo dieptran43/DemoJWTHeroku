@@ -26,9 +26,10 @@ mongoose.Promise = global.Promise;
 const signinRoutes = require('./api/routes/signin');
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const userRoutes = require('./api/routes/user');
 
 app.use(morgan('dev')); //morgan to know url in server
-app.use('/', express.static('./public'));
+app.use('/uploads', express.static('uploads'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
@@ -57,6 +58,7 @@ app.get('/', (req, res, next) => {
 app.use('/signin', signinRoutes);
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/user', userRoutes)
 
 
 app.use((req, res, next) => {
